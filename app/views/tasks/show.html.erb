@@ -1,0 +1,22 @@
+<h1>Our SHOW view 🚀</h1>
+<br>
+<br>
+<h2>
+  <%= @task.title %>
+</h2>
+<br>
+<p>
+  <%= @task.details %>
+</p>
+<br>
+<br>
+<p>
+  <%= @task.completed %>
+</p>
+<br>
+<%= link_to 'index', tasks_path(@tasks) %>
+<br><br>
+<%= link_to "Delete #{@task.title}",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
